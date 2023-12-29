@@ -1,0 +1,26 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+}
+
+.listItem {
+  display: flex;
+  background-color: rgba(233, 232, 231, 0.475);
+  flex-direction: column;
+  justify-content: space-between;
+  width: 600px;
+  height: 100px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.listItem-name {
+  text-align: center;
+}
+
+.listItem-details {
+  display: flex;
+  justify-content: space-between;
+}

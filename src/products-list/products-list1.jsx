@@ -1,49 +1,30 @@
+import "./products-list1.css";
+
+const productsList = [
+  { name: "milk", id: 1, price: 739.02 },
+  { name: "butter", id: 2, price: 747.38 },
+  { name: "bread", id: 3, price: 199.49 },
+  { name: "sausages", id: 4, price: 580.98 },
+  { name: "potatoes", id: 5, price: 228.32 },
+  { name: "broccoli", id: 6, price: 61.07 },
+  { name: "cheese", id: 7, price: 349.73 },
+  { name: "muschrooms", id: 8, price: 447.5 },
+  { name: "cola", id: 9, price: 9.41 },
+  { name: "chocolate", id: 10, price: 973.81 },
+];
+
 export const MyList = ({ dupa }) => {
-  const productsList = [
-    "milk",
-    "butter",
-    "bread",
-    "sausages",
-    "potatoes",
-    "broccoli",
-    "cheese",
-    "muschrooms",
-    "cola",
-    "chocolate",
-  ];
-
-  console.log(
-    "final",
-    productsList.filter((product) => {
-      return product.includes(dupa);
-    })
-  );
-
-  const filteredList = productsList.filter((product) => {
-    return product.includes(dupa);
-  });
-
   return (
-    <ol>
-      {filteredList.map((product) => (
-        <li key={product}>{product}</li>
+    <ul className="list">
+      {productsList.map((el) => (
+        <li key={el.id} className="listItem">
+          <span className="listItem-name">{el.name}</span>
+          <div className="listItem-details">
+            <span>ID: {el.id}</span>
+            <span>Cena: {el.price}</span>
+          </div>
+        </li>
       ))}
-    </ol>
+    </ul>
   );
 };
-
-/* 
-
-const arr = [1,2,3,4,5,6,7,8,9,10];
-
-let jak = arr.filter((el) => el>5)
-
-
-
-<ul>
-  {products.map(product =>
-  <li key={product.id}>
-    {product.title}
-  </li>
-)}
-</ul> */
